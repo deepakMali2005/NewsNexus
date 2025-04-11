@@ -123,13 +123,13 @@ app.get("/:section", isLoggedIn, async (req, res)=>{
             response = await axios.get('https://newsapi.org/v2/top-headlines', {
                 params: {
                   category:section,
-                  country: 'in',
+                //   country: 'in',
                   apiKey: NEWS_API_KEY
                 }
               });
         }
         sectionData = response.data.articles;
-        // console.log(sectionData)
+        console.log(sectionData)
         
       } catch (error) {
         console.error('Error fetching news:', error);

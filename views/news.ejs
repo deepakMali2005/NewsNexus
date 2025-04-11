@@ -31,7 +31,8 @@
             <% sectionData.forEach(article=>{ %>
                
                 <a class="news-section" href="<%= article.url %>" target="_blank">
-                <img src="https://picsum.photos/300" alt="image">
+                <!-- <img src="https://picsum.photos/300" alt="image"> -->
+                <img src="<%= article.urlToImage ? article.urlToImage : 'https://via.placeholder.com/300x200?text=No+Image' %>" alt="News image">
                 <p> <%= article.title %></p>
                 </a>
                 
